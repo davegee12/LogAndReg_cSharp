@@ -1,0 +1,30 @@
+@model RegUser
+<form asp-action="CreateRegUser" asp-controller="Home" method="post">
+    <div class="form-group">
+        <span style="color: red;" asp-validation-for="fname"></span>
+        <label asp-for="fname" for="exampleInputEmail1">First Name:</label>
+        <input asp-for="fname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+        <span style="color: red;" asp-validation-for="lname"></span>
+        <label asp-for="lname" for="exampleInputEmail1">Last Name:</label>
+        <input asp-for="lname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+        <span style="color: red;" asp-validation-for="email"></span>
+        <label asp-for="email" for="exampleInputEmail1">Email:</label>
+        <input asp-for="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <span style="color: red;" asp-validation-for="password"></span>
+        <label asp-for="password" for="exampleInputEmail1">Password:</label>
+        <input asp-for="password" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+        <span style="color: red;" asp-validation-for="confirm"></span>
+        <label asp-for="confirm" for="exampleInputEmail1">Re-enter Password:</label>
+        <input asp-for="confirm" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirm password">
+    </div>
+    <p class="text-center"><button type="submit" class="btn btn-primary">Register!</button></p>
+</form>
